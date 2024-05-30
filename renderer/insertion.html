@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Interface</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body class="bg-teal-700">
+    <div class="max-w-xl m-auto h-screen flex flex-col justify-center items-center">
+        <div class="container">
+            <div class="left-section">
+                <h2>Informations du Patient</h2>
+                <form id="patientForm" class="hidden">
+                    <div class="form-group">
+                        <label for="nom">Nom:</label>
+                        <div class="input-container">
+                            <input type="text" id="nom" name="nom" style="width:20rem;" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom">Prénom:</label>
+                        <div class="input-container">
+                            <input type="text" id="prenom" name="prenom" style="width:20rem;" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <div class="input-container">
+                            <input type="number" id="age" name="age" style="width:20rem;" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sexe">Sexe:</label>
+                        <div class="input-container">
+                            <select id="sexe" name="sexe" style="width:10rem;" required>
+                                <option value="M">Masculin</option>
+                                <option value="F">Féminin</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="clinique">Clinique:</label>
+                        <div class="input-container">
+                            <input type="text" id="clinique" name="clinique" style="width:20rem;" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="maladie">Maladie:</label>
+                        <div class="input-container">
+                            <input type="text" id="maladie" name="maladie" style="width:20rem;" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="medecinTraitant">Médecin Traitant:</label>
+                        <div class="input-container">
+                            <input type="text" id="medecinTraitant" name="medecinTraitant" style="width:20rem;" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="right-section">
+                <h2>Sélectionner une image</h2>
+                <input id="img" type="file" class="hidden" onchange="showimage()" />
+                <div id="preview" class="hidden"></div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button id="addWatermarkBtn" onclick="addWatermarkToImage()" class="py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white  hover:bg-teal-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                Sauvegarder
+            </button>
+            <button id="backBtn" onclick="goBack()" class="py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-teal-500 hover:bg-teal-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                Retour
+            </button>
+        </div>
+    </div>
+    <script src="js/renderer.js"></script>
+</body>
+
+</html>

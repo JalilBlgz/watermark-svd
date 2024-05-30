@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watermark Application</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="max-w-xl m-auto h-screen flex flex-col justify-center items-center">
+    <h1 class="text-white text-2xl mb-6" style="font-size:2.5rem; margin-bottom: 80px;" > Tatouage Numerique Medical</h1> 
+    <button id="insertBtn" onclick="goToInsertion()" class="w-80 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-teal-500 hover:bg-teal-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mt-6">
+      Insertion
+    </button>
+    <button id="extractBtn" onclick="goToExtraction()" class="w-80 flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-teal-500 hover:bg-teal-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mt-6">
+      Extraction
+    </button>
+  </div>
+
+  <script src="js/renderer.js"></script>
+</body>
+</html>
